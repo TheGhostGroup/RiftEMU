@@ -1,9 +1,6 @@
-﻿using Org.BouncyCastle.Crypto.Engines;
-using Org.BouncyCastle.Crypto.Modes;
-using Org.BouncyCastle.Crypto.Parameters;
-/*
- * Copyright (C) 2011 Strawberry-Pr0jcts <http://strawberry-pr0jcts.com>
- * Copyright (C) 2011 APS http://AllPrivateServer.com
+﻿/*
+ * Copyright (C) 2011 APS
+ *	http://AllPrivateServer.com
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,6 +27,10 @@ using System.Numerics;
 using System.Security.Cryptography;
 using System.Threading;
 
+using Org.BouncyCastle.Crypto.Engines;
+using Org.BouncyCastle.Crypto.Modes;
+using Org.BouncyCastle.Crypto.Parameters;
+
 using FrameWork;
 
 namespace Common
@@ -49,6 +50,7 @@ namespace Common
         public Account Acct;
         public Character Character;
         public Realm Rm;
+        public long JustCreatedCharacter = -1;
 
         public RiftClient(TCPManager Server)
             : base(Server)
@@ -366,7 +368,7 @@ namespace Common
                 Ft.Close();
                 return Result;
             }
-            catch
+            catch (Exception e)
             {
                 Log.Error("GetCache", "Invalid Cache Data : Type=" + CacheType + ",ID=" + ID);
                 return null;

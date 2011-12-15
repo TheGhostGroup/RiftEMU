@@ -1,6 +1,6 @@
 ﻿/*
- * Copyright (C) 2011 Strawberry-Pr0jcts <http://strawberry-pr0jcts.com>
- * Copyright (C) 2011 APS http://AllPrivateServer.com
+ * Copyright (C) 2011 APS
+ *	http://AllPrivateServer.com
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -100,6 +100,7 @@ public enum Opcodes
     WorldPorticulumTeleport = 0x0E55,
     WorldPorticulumConfirm = 0x11CE,
     WorldTeleport = 0x0F04,
+    WorldDisconnect = 0x0F17,
     WorldChatMessage = 0x010CC,
 
     WorldCharacterInformation = 0x02AE,

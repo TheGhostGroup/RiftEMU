@@ -1,6 +1,6 @@
 ﻿/*
- * Copyright (C) 2011 Strawberry-Pr0jcts <http://strawberry-pr0jcts.com>
- * Copyright (C) 2011 APS http://AllPrivateServer.com
+ * Copyright (C) 2011 APS
+ *	http://AllPrivateServer.com
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -114,7 +114,7 @@ namespace Common
 
         }
 
-        public void AddCharacter(Character Char)
+        public long AddCharacter(Character Char)
         {
             long CharacterId = System.Threading.Interlocked.Increment(ref MaxCharacterId);
 
@@ -125,6 +125,23 @@ namespace Common
 
             CharactersDB.AddObject(Char);
             CharactersDB.AddObject(Char.Info);
+
+            return CharacterId;
+        }
+
+        public bool DeleteCharacter(long GUID,long AccountID)
+        {
+            Character Char = GetCharacter(GUID);
+            if (Char == null || Char.AccountId != AccountID)
+                return false;
+
+            CharactersDB.DeleteObject(Char);
+            return true;
+        }
+
+        public void SaveObject(DataObject Object)
+        {
+            CharactersDB.SaveObject(Object);
         }
 
         #endregion

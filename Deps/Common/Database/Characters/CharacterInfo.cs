@@ -1,6 +1,6 @@
 ﻿/*
- * Copyright (C) 2011 Strawberry-Pr0jcts <http://strawberry-pr0jcts.com>
- * Copyright (C) 2011 APS http://AllPrivateServer.com
+ * Copyright (C) 2011 APS
+ *	http://AllPrivateServer.com
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@ namespace Common
 
         [DataElement()]
         [Unsigned7Bit(4)]
-        public uint MapID = 290412351;
+        public uint MapID = 676;
 
         [DataElement()]
         [Raw4Bit(5)]
@@ -67,7 +67,30 @@ namespace Common
             set
             {
                 PacketProcessor.BytesToField(this, value, "Field7");
+                if (Field7.Count <= 0)
+                {
+                    // Shoulders
+                    AddEquipement(6, 1620638527, 1791353197, 0, 582720386, 2028933878);
+
+                    // Header
+                    AddEquipement(10, 1530909831, 0, 0, 2, 768949022);
+
+                    // Hairs
+                    AddEquipement(46, 864322278, 0, 0, 1785712051, 807819347);
+                }
             }
+        }
+
+        private void AddEquipement(long Slot,uint F4, uint F5, uint F6, uint F7, uint CacheID)
+        {
+            CharacterDesc Packet = new CharacterDesc();
+            Packet.AddField(4, EPacketFieldType.Raw4Bytes, F4);
+            Packet.AddField(5, EPacketFieldType.Raw4Bytes, F5);
+            Packet.AddField(6, EPacketFieldType.Raw4Bytes, F6);
+            Packet.AddField(7, EPacketFieldType.Raw4Bytes, F7);
+            Packet.Field8 = new CharacterInfoCache();
+            Packet.Field8.CacheIdentifier = CacheID;
+            Field7.Add(Slot, Packet);
         }
 
         [DataElement()]
@@ -116,7 +139,7 @@ namespace Common
 
         [DataElement()]
         [ListBit(24)]
-        public List<uint> Field24 = new List<uint>(new uint[] { 1149965263, 1147537107, 1152778324 });
+        public List<float> Position = new List<float> { 1113.03967f, 920.1114f, 1444.58533f };
 
         [ListBit(25)]
         public List<ISerializablePacket> Field25List = new List<ISerializablePacket>();

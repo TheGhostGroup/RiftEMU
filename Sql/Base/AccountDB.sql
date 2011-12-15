@@ -22,14 +22,14 @@ DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE `accounts` (
   `Accounts_ID` text,
   `Id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `Username` varchar(255) DEFAULT NULL,
+  `Username` varchar(100) DEFAULT NULL,
   `Sha_Password` text,
   `SessionKey` text,
   `Email` text,
   `GmLevel` int(11) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   UNIQUE KEY `Username` (`Username`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of accounts

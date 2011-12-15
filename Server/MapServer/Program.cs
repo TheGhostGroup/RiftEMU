@@ -1,6 +1,6 @@
 ﻿/*
- * Copyright (C) 2011 Strawberry-Pr0jcts <http://strawberry-pr0jcts.com>
- * Copyright (C) 2011 APS http://AllPrivateServer.com
+ * Copyright (C) 2011 APS
+ *	http://AllPrivateServer.com
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -69,17 +69,15 @@ namespace MapServer
 
         static void Main(string[] args)
         {
-            Log.Texte("", "---------------------------------------------------------------", ConsoleColor.DarkBlue);
-            Log.Texte("", " _______ _________ _______ _________ _______  _______          ", ConsoleColor.Cyan);
-            Log.Texte("", "(  ____ )\__   __/(  ____ \\__   __/(  ____ \(       )|\     /|", ConsoleColor.Cyan);
-            Log.Texte("", "| (    )|   ) (   | (    \/   ) (   | (    \/| () () || )   ( |", ConsoleColor.Cyan);
-            Log.Texte("", "| (____)|   | |   | (__       | |   | (__    | || || || |   | |", ConsoleColor.Cyan);
-            Log.Texte("", "|     __)   | |   |  __)      | |   |  __)   | |(_)| || |   | |", ConsoleColor.Cyan);
-            Log.Texte("", "| (\ (      | |   | (         | |   | (      | |   | || |   | |", ConsoleColor.Cyan);
-            Log.Texte("", "| ) \ \_____) (___| )         | |   | (____/\| )   ( || (___) |", ConsoleColor.Cyan);
-            Log.Texte("", "|/   \__/\_______/|/          )_(   (_______/|/     \|(_______)", ConsoleColor.Cyan);
-            Log.Texte("", "www.Strawberry-Pr0jcts.com", ConsoleColor.DarkCyan);
-            Log.Texte("", "---------------------------------------------------------------", ConsoleColor.DarkBlue);
+            Log.Texte("", "-------------------------------", ConsoleColor.DarkBlue);
+            Log.Texte("", "          _____   _____ ", ConsoleColor.Cyan);
+            Log.Texte("", "    /\\   |  __ \\ / ____|", ConsoleColor.Cyan);
+            Log.Texte("", "   /  \\  | |__) | (___  ", ConsoleColor.Cyan);
+            Log.Texte("", "  / /\\ \\ |  ___/ \\___ \\ ", ConsoleColor.Cyan);
+            Log.Texte("", " / ____ \\| |     ____) |", ConsoleColor.Cyan);
+            Log.Texte("", "/_/    \\_\\_|    |_____/ Rift", ConsoleColor.Cyan);
+            Log.Texte("", "http://AllPrivateServer.com", ConsoleColor.DarkCyan);
+            Log.Texte("", "-------------------------------", ConsoleColor.DarkBlue);
 
             // Loading all configs files
             ConfigMgr.LoadConfigs();
@@ -94,23 +92,13 @@ namespace MapServer
             BuildPlayer = new byte[Str.Length];
             Str.Read(BuildPlayer, 0, BuildPlayer.Length);
 
-            /*// Listening Client
-            if (!TCPManager.Listen<RiftServer>(Config.ServerInfo.MapPort, "CharacterServer"))
-                ConsoleMgr.WaitAndExit(2000);
-
-            PacketInStream Entity = new PacketInStream(BuildPlayer,BuildPlayer.Length);
-            WorldEntityUpdate Update = PacketProcessor.ReadPacket(ref Entity) as WorldEntityUpdate;
-            Log.Info("Entity", "GUID = " + Update.GUID + " List Lengh = " + Update.Field1.Count);
-            Console.ReadKey();
-            Environment.Exit(0);*/
-
             // Starting Remote Client
             Client = new RpcClient("Map-" + Config.ServerInfo.MapAdress, Config.ClientInfo.RpcLocalIp, 2);
             if (!Client.Start(Config.ClientInfo.RpcServerIp, Config.ClientInfo.RpcServerPort))
                 ConsoleMgr.WaitAndExit(2000);
 
             // Listening Client
-            if (!TCPManager.Listen<RiftServer>(Config.ServerInfo.MapPort, "CharacterServer"))
+            if (!TCPManager.Listen<GameRiftServer>(Config.ServerInfo.MapPort, "CharacterServer"))
                 ConsoleMgr.WaitAndExit(2000);
 
             MapMgr.Client = Client;

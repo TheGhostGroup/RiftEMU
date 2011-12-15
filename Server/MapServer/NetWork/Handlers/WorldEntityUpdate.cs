@@ -1,6 +1,6 @@
 ﻿/*
- * Copyright (C) 2011 Strawberry-Pr0jcts <http://strawberry-pr0jcts.com>
- * Copyright (C) 2011 APS http://AllPrivateServer.com
+ * Copyright (C) 2011 APS
+ *	http://AllPrivateServer.com
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -70,7 +70,7 @@ namespace MapServer
 
             SetCharacterInformation(Char);
             SetCharacterStats(Char);
-            SetPosition(676, "guardian_map", new List<float> { 1113.03967f, 920.1114f, 1444.58533f });
+            SetPosition(Char.Info.MapID, Char.Info.MapName, Char.Info.Position);
 
             AddPacketToList(0x026B);
             AddPacketToList(0x025A);

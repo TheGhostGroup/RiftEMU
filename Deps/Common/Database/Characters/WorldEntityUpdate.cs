@@ -1,6 +1,6 @@
 ﻿/*
- * Copyright (C) 2011 Strawberry-Pr0jcts <http://strawberry-pr0jcts.com>
- * Copyright (C) 2011 APS http://AllPrivateServer.com
+ * Copyright (C) 2011 APS
+ *	http://AllPrivateServer.com
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -25,16 +25,16 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.IO;
 
-using Common;
 using FrameWork;
 
-namespace MapServer
+namespace Common
 {
+    [Serializable]
     [ISerializableAttribute((long)Opcodes.WorldPositionExtra)]
     public class WorldPositionExtra : ISerializablePacket
     {
         [ArrayBit(1)]
-        public string MapName;
+        public string MapName = "guardian_map";
 
         [Unsigned7Bit(2)]
         public long MapId = 676;
@@ -42,7 +42,6 @@ namespace MapServer
         [ListBit(3)]
         public List<float> Position = new List<float>() { 1113.03967f, 920.1114f, 1444.58533f }; // X,Y,Z
 
-        // Unk
         [ListBit(4)]
         public List<uint> Field4 = new List<uint>() { 2147483648, 3212777419, 2147483648, 3182182386 }; // Unk
 
@@ -54,6 +53,7 @@ namespace MapServer
         public List<float> Position2 = new List<float>() { 1113.03967f, 920.1114f, 1444.58533f };
     }
 
+    [Serializable]
     [ISerializableAttribute((long)Opcodes.CharacterInfoCache)]
     public class CharacterInfoCache : ISerializablePacket
     {
@@ -61,6 +61,7 @@ namespace MapServer
         public uint CacheIdentifier;
     }
 
+    [Serializable]
     [ISerializableAttribute((long)Opcodes.CharacterInfoDesc)]
     public class CharacterDesc : ISerializablePacket
     {
