@@ -109,7 +109,7 @@ namespace MapServer
             }
 
             WorldServerMOTD Motd = new WorldServerMOTD();
-            Motd.Text = "Welcome to APS-Rift";
+            Motd.Text = "Welcome to Strawberry-Pr0jcts RiftEMU for patch 1.2";
             From.SendSerialized(Motd);
         }
     }
