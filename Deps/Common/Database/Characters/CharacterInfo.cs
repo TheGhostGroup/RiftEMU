@@ -83,13 +83,13 @@ namespace Common
 
         private void AddEquipement(long Slot,uint F4, uint F5, uint F6, uint F7, uint CacheID)
         {
-            CharacterDesc Packet = new CharacterDesc();
+            ISerializablePacket Packet = new ISerializablePacket();
             Packet.AddField(4, EPacketFieldType.Raw4Bytes, F4);
             Packet.AddField(5, EPacketFieldType.Raw4Bytes, F5);
             Packet.AddField(6, EPacketFieldType.Raw4Bytes, F6);
             Packet.AddField(7, EPacketFieldType.Raw4Bytes, F7);
-            Packet.Field8 = new CharacterInfoCache();
-            Packet.Field8.CacheIdentifier = CacheID;
+            //Packet.Field8 = new CharacterInfoCache();
+            //Packet.Field8.CacheIdentifier = CacheID;
             Field7.Add(Slot, Packet);
         }
 

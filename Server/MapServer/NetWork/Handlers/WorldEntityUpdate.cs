@@ -100,10 +100,10 @@ namespace MapServer
 
         public void SetPosition(long MapID, string MapName, List<float> Position)
         {
-            WorldPositionExtra WorldPos = GetPacketOnList((long)Opcodes.WorldPositionExtra) as WorldPositionExtra;
+            /*WorldPositionExtra WorldPos = GetPacketOnList((long)Opcodes.WorldPositionExtra) as WorldPositionExtra;
             WorldPos.MapId = MapID;
             WorldPos.Position = Position; // X,Y,Z
-            WorldPos.MapName = MapName;
+            WorldPos.MapName = MapName;*/
         }
 
         public void SetCharacterInformation(Character Char)

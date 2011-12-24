@@ -39,13 +39,13 @@ namespace CharacterServer
         {
             Log.Texte("", "---------------------------------------------------------------", ConsoleColor.DarkBlue);
             Log.Texte("", " _______ _________ _______ _________ _______  _______          ", ConsoleColor.Cyan);
-            Log.Texte("", "(  ____ )\__   __/(  ____ \\__   __/(  ____ \(       )|\     /|", ConsoleColor.Cyan);
-            Log.Texte("", "| (    )|   ) (   | (    \/   ) (   | (    \/| () () || )   ( |", ConsoleColor.Cyan);
+            Log.Texte("", "(  ____ )\\__   __/(  ____ \\__   __/(  ____ \\(       )|\\     /|", ConsoleColor.Cyan);
+            Log.Texte("", "| (    )|   ) (   | (    \\/   ) (   | (    \\/| () () || )   ( |", ConsoleColor.Cyan);
             Log.Texte("", "| (____)|   | |   | (__       | |   | (__    | || || || |   | |", ConsoleColor.Cyan);
             Log.Texte("", "|     __)   | |   |  __)      | |   |  __)   | |(_)| || |   | |", ConsoleColor.Cyan);
-            Log.Texte("", "| (\ (      | |   | (         | |   | (      | |   | || |   | |", ConsoleColor.Cyan);
-            Log.Texte("", "| ) \ \_____) (___| )         | |   | (____/\| )   ( || (___) |", ConsoleColor.Cyan);
-            Log.Texte("", "|/   \__/\_______/|/          )_(   (_______/|/     \|(_______)", ConsoleColor.Cyan);
+            Log.Texte("", "| (\\ (      | |   | (         | |   | (      | |   | || |   | |", ConsoleColor.Cyan);
+            Log.Texte("", "| ) \\ \\_____) (___| )         | |   | (____/\\| )   ( || (___) |", ConsoleColor.Cyan);
+            Log.Texte("", "|/   \\__/\\_______/|/          )_(   (_______/|/     \\|(_______)", ConsoleColor.Cyan);
             Log.Texte("", "www.Strawberry-Pr0jcts.com", ConsoleColor.DarkCyan);
             Log.Texte("", "---------------------------------------------------------------", ConsoleColor.DarkBlue);
 

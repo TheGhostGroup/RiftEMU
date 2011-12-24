@@ -209,12 +209,12 @@ namespace MapServer
             StartPosition.MapName = "guardian_map";
             From.SendSerialized(StartPosition);
 
-            WorldPositionExtra ExtraPosition = new WorldPositionExtra();
-            ExtraPosition.MapName = "guardian_map";
+            //WorldPositionExtra ExtraPosition = new WorldPositionExtra();
+            //ExtraPosition.MapName = "guardian_map";
 
             ISerializablePacket Extra = new ISerializablePacket();
-            Extra.Opcode = (long)Opcodes.WorldStartingPositionExtra;
-            Extra.AddField(0, EPacketFieldType.Packet, ExtraPosition);
+            //Extra.Opcode = (long)Opcodes.WorldStartingPositionExtra;
+            //Extra.AddField(0, EPacketFieldType.Packet, ExtraPosition);
             From.SendSerialized(Extra);
         }
     }
