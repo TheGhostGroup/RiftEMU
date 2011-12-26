@@ -192,7 +192,7 @@ namespace FrameWork
         {
             try
             {
-                Listener = new TcpListener(port);
+                Listener = new TcpListener(IPAddress.Any, port);
                 Listener.Server.ReceiveBufferSize = BUF_SIZE;
                 Listener.Server.SendBufferSize = BUF_SIZE;
                 Listener.Server.NoDelay = false;
