@@ -24,7 +24,7 @@ using System.Text;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     [Serializable]
     [ISerializableAttribute((long)Opcodes.ProtocolPingPong)]

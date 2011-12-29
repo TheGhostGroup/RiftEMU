@@ -24,7 +24,7 @@ using System.Text;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     public class RiftServer  :TCPManager
     {

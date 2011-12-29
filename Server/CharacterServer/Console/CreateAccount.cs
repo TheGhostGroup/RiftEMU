@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
 
-using Common;
+using FrameWork;
 using FrameWork;
 
 namespace CharacterServer
@@ -33,7 +33,7 @@ namespace CharacterServer
     {
         public bool HandleCommand(string command, List<string> args)
         {
-            Account Acct = Program.AcctMgr.GetAccountByUsername(args[0]);
+            Account Acct = CharacterServer.AcctMgr.GetAccountByUsername(args[0]);
             if (Acct != null)
             {
                 Log.Error("CreateAccount", "Username '" + args[0] + "' Already exist.");

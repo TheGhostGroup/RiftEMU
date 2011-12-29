@@ -27,7 +27,7 @@ using System.IO;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     [Serializable]
     [ISerializableAttribute((long)Opcodes.WorldPositionExtra)]

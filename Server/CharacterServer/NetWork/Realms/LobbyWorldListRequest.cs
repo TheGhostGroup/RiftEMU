@@ -22,7 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Common;
+using FrameWork;
 using FrameWork;
 
 namespace CharacterServer
@@ -34,7 +34,7 @@ namespace CharacterServer
         {
             Log.Success("WorldList", "Request : In Progress");
 
-            Realm[] Realms = Program.AcctMgr.GetRealms();
+            Realm[] Realms = CharacterServer.AcctMgr.GetRealms();
 
             LobbyWorldListResponse Rp = new LobbyWorldListResponse();
             foreach(Realm Rm in Realms)

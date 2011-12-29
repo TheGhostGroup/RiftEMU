@@ -21,7 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using FrameWork;
-using Common;
+using FrameWork;
 
 namespace CharacterServer.Console
 {
@@ -30,7 +30,7 @@ namespace CharacterServer.Console
     {
         public bool HandleCommand(string command, List<string> args)
         {
-            Account Acct = Program.AcctMgr.GetAccountByUsername(args[0]);
+            Account Acct = CharacterServer.AcctMgr.GetAccountByUsername(args[0]);
             if (Acct == null)
             {
                 Log.Error("DeleteAccount", "Deleting '" + args[0] + "' failed");

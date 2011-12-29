@@ -22,7 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Common;
+using FrameWork;
 using FrameWork;
 
 namespace MapServer
@@ -42,7 +42,7 @@ namespace MapServer
             if(Character != null)
             {
                 Log.Success("OnDisconnected", "Saving Character : " + Character.CharacterName);
-                Program.Characters.SaveObject(Character.Info);
+                MapServer.Characters.SaveObject(Character.Info);
             }
         }
     }

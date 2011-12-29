@@ -25,7 +25,7 @@ using System.Xml.Serialization;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     [Serializable]
     public class MapServerInfo

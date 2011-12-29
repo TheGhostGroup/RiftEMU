@@ -22,7 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Common;
+using FrameWork;
 using FrameWork;
 
 namespace MapServer
@@ -110,7 +110,7 @@ namespace MapServer
         {
             ISerializablePacket CharacterInformation = GetPacketOnList((long)Opcodes.WorldCharacterInformation);
             CharacterInformation.AddField(12, EPacketFieldType.ByteArray, Char.CharacterName);
-            CharacterInformation.AddField(54, EPacketFieldType.Unsigned7BitEncoded, Program.Rm.RiftId);
+            CharacterInformation.AddField(54, EPacketFieldType.Unsigned7BitEncoded, MapServer.Rm.RiftId);
             CharacterInformation.AddField(56, EPacketFieldType.Packet, Char.Info.CustomPacket);
         }
 

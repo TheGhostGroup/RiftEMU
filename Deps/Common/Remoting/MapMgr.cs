@@ -24,7 +24,7 @@ using System.Text;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     [Rpc(false, System.Runtime.Remoting.WellKnownObjectMode.Singleton, 2)]
     public class MapMgr : RpcObject

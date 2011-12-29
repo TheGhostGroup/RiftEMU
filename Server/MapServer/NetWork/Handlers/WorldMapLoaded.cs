@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 
 using FrameWork;
-using Common;
+using FrameWork;
 
 namespace MapServer
 {
@@ -102,7 +102,7 @@ namespace MapServer
 
             // Character Information
             {
-                PacketInStream Entity = new PacketInStream(Program.BuildPlayer, Program.BuildPlayer.Length);
+                PacketInStream Entity = new PacketInStream(MapServer.BuildPlayer, MapServer.BuildPlayer.Length);
                 WorldEntityUpdate Update = PacketProcessor.ReadPacket(ref Entity) as WorldEntityUpdate;
                 if(Update.Build(From.Character))
                     From.SendSerialized(Update);

@@ -25,7 +25,7 @@ using System.Reflection;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     public class ListBitAttribute : ISerializableFieldAttribute
     {

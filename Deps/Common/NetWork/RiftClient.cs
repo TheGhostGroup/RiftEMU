@@ -33,7 +33,7 @@ using Org.BouncyCastle.Crypto.Parameters;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     public enum RiftState : int
     {

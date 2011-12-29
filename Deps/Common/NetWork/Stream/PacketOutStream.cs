@@ -26,7 +26,7 @@ using System.Text;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     public class PacketOutStream : PacketOut
     {

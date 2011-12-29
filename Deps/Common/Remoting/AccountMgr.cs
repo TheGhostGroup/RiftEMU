@@ -24,7 +24,7 @@ using System.Text;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     [Rpc(true,System.Runtime.Remoting.WellKnownObjectMode.Singleton,1)]
     public class AccountMgr : RpcObject

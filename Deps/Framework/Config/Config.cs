@@ -1,4 +1,4 @@
-/*
+﻿/*
  * Copyright (C) 2011 Strawberry-Pr0jcts <http://strawberry-pr0jcts.com>
  *
  * This program is free software; you can redistribute it and/or modify
@@ -22,7 +22,7 @@ using System.Threading;
 using System.Diagnostics;
 using FrameWork;
 
-namespace Common.Config
+namespace FrameWork.Config
 {
     public class Config
     {

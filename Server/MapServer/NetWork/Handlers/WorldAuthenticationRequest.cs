@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.IO;
 
-using Common;
+using FrameWork;
 using FrameWork;
 
 namespace MapServer
@@ -123,7 +123,7 @@ namespace MapServer
         {
             Log.Success("Authentification", "Email = " + Email + " SessionTicket = " + SessionTicket);
 
-            long Char = Program.Maps.GetConnecting(Email);
+            long Char = MapServer.Maps.GetConnecting(Email);
 
             if (Char == 0)
             {
@@ -132,7 +132,7 @@ namespace MapServer
                 return;
             }
 
-            From.Acct = Program.Accounts.GetAccountByUsername(Email);
+            From.Acct = MapServer.Accounts.GetAccountByUsername(Email);
 
             if (From.Acct == null)
             {
@@ -141,7 +141,7 @@ namespace MapServer
                 return;
             }
 
-            From.Character = Program.Characters.GetCharacter(Char);
+            From.Character = MapServer.Characters.GetCharacter(Char);
 
             if (From.Acct == null)
             {
@@ -154,11 +154,11 @@ namespace MapServer
             Rp.AddField(0, EPacketFieldType.True, (bool)true);
             From.SendSerialized(Rp);
 
-            CacheTemplate[] Tmps = Program.World.GetTemplates();
+            CacheTemplate[] Tmps = MapServer.World.GetTemplates();
             foreach (CacheTemplate Tmp in Tmps)
                 From.SendSerialized(WorldMgr.BuildCache(Tmp.CacheID, Tmp.CacheType, Tmp));
 
-            CacheData[] Dts = Program.World.GetDatas();
+            CacheData[] Dts = MapServer.World.GetDatas();
             foreach (CacheData Tmp in Dts)
                 From.SendSerialized(WorldMgr.BuildCache(Tmp.CacheID, Tmp.CacheType, Tmp));
 
@@ -201,8 +201,8 @@ namespace MapServer
 
             WorldZoneInfo ZoneInfo = new WorldZoneInfo();
             ZoneInfo.ZoneFileName = "Mathosia1";
-            ZoneInfo.Description = Program.World.GetText(290412351);
-            ZoneInfo.DisplayName = Program.World.GetText(1647389394);
+            ZoneInfo.Description = MapServer.World.GetText(290412351);
+            ZoneInfo.DisplayName = MapServer.World.GetText(1647389394);
             From.SendSerialized(ZoneInfo);
 
             WorldStartingPosition StartPosition = new WorldStartingPosition();

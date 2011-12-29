@@ -22,10 +22,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Common;
+using FrameWork;
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     [Serializable]
     [ISerializableAttribute((long)Opcodes.LobbyCharacterListResponse)]

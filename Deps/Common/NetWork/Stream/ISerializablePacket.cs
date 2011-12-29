@@ -25,7 +25,7 @@ using System.Text;
 
 using FrameWork;
 
-namespace Common
+namespace FrameWork
 {
     [Serializable]
     public class ISerializablePacket : DataObject

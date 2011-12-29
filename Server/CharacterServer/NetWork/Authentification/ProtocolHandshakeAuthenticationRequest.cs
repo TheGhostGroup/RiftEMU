@@ -24,7 +24,7 @@ using System.Text;
 using System.IO;
 using System.Xml.Serialization;
 
-using Common;
+using FrameWork;
 using FrameWork;
 
 namespace CharacterServer
@@ -55,10 +55,10 @@ namespace CharacterServer
                 XmlSerializer xmls = new XmlSerializer(typeof(ClientAuthCertificate));
                 ClientAuthCertificate Cert = xmls.Deserialize(new MemoryStream(Encoding.UTF8.GetBytes(Certificate))) as ClientAuthCertificate;
 
-                if (Program.Config.UseCertificate)
-                    From.Acct = Program.AcctMgr.GetAccount(Cert.Sessionkey);
+                if (CharacterServer.Config.UseCertificate)
+                    From.Acct = CharacterServer.AcctMgr.GetAccount(Cert.Sessionkey);
                 else
-                    From.Acct = Program.AcctMgr.GetAccount(Cert.Username, Cert.Hash);
+                    From.Acct = CharacterServer.AcctMgr.GetAccount(Cert.Username, Cert.Hash);
 
             }
             catch

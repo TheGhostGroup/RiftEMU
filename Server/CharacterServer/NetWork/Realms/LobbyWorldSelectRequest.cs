@@ -22,7 +22,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Common;
+using FrameWork;
 using FrameWork;
 
 namespace CharacterServer
@@ -35,7 +35,7 @@ namespace CharacterServer
 
         public override void OnRead(RiftClient From)
         {
-            Realm Rm = Program.AcctMgr.GetRealm((int)RealmId);
+            Realm Rm = CharacterServer.AcctMgr.GetRealm((int)RealmId);
             if (Rm != null)
                 From.Rm = Rm;
 

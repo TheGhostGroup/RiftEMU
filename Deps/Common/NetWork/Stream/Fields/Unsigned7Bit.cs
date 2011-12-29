@@ -23,7 +23,7 @@ using System.Linq;
 using System.Text;
 using System.Reflection;
 
-namespace Common
+namespace FrameWork
 {
     public class Unsigned7BitAttribute : ISerializableFieldAttribute
     {

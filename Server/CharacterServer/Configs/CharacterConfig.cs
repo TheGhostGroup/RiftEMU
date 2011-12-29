@@ -23,19 +23,21 @@ using System.Linq;
 using System.Text;
 
 using FrameWork;
+using FrameWork.Config;
 
 namespace CharacterServer
 {
-    [aConfigAttributes("Configs/Characters.xml")]
-    public class CharacterConfig : aConfig
+    public class CharacterConfig
     {
-        public int CharacterServerPort = 6900;
+        static Config CharConfig = new Config(Config.ConfigFile = "CharacterServer.conf");
 
-        public string RpcIP = "127.0.0.1";
-        public int RpcPort = 6800;
-        public int RpcClientStartingPort = 6000;
+        public int CharacterServerPort = (int)CharConfig.ReadValue("Server.Port", 6900);
 
-        public bool UseCertificate = false;
+        public string RpcIP = (string)CharConfig.ReadValue("Remote.IP", "127.0.0.1");
+        public int RpcPort = (int)CharConfig.ReadValue("Remote.Port", 6800);
+        public int RpcClientStartingPort = (int)CharConfig.ReadValue("Remote.ClientPort", 6000);
+
+        public bool UseCertificate = (bool)CharConfig.ReadValue("Certificate.Enabled", false);
 
         public DatabaseInfo AccountDB = new DatabaseInfo();
         public LogInfo LogLevel = new LogInfo();

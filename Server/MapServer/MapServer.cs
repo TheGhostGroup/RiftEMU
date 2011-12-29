@@ -24,12 +24,12 @@ using System.Text;
 using System.IO;
 
 using FrameWork;
-using Common;
+using FrameWork;
 
 
 namespace MapServer
 {
-    class Program
+    class MapServer
     {
         static public MapConfig Config;
         static public RpcClient Client;
