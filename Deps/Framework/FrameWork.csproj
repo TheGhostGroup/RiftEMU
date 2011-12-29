@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\aConfigAttributes.cs" />
+    <Compile Include="Config\Config.cs" />
     <Compile Include="Config\ConfigMgr.cs" />
     <Compile Include="Console\ConsoleHandlerAttribute.cs" />
     <Compile Include="Console\ConsoleMgr.cs" />
