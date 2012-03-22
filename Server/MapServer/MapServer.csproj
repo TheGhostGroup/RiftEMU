@@ -51,7 +51,7 @@
     <Compile Include="NetWork\Handlers\WorldEntityUpdate.cs" />
     <Compile Include="NetWork\Handlers\WorldMapLoaded.cs" />
     <Compile Include="NetWork\Handlers\WorldServerPositionUpdate.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="MapServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

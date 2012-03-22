@@ -24,7 +24,6 @@ using System.Text;
 using System.IO;
 
 using FrameWork;
-using FrameWork;
 
 namespace MapServer
 {

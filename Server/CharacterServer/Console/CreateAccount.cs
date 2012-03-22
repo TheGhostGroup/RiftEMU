@@ -24,7 +24,6 @@ using System.Text;
 using System.Security.Cryptography;
 
 using FrameWork;
-using FrameWork;
 
 namespace CharacterServer
 {

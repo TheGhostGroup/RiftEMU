@@ -59,7 +59,7 @@
     <Compile Include="NetWork\Realms\LobbyWorldListResponse.cs" />
     <Compile Include="NetWork\Realms\LobbyWorldSelectRequest.cs" />
     <Compile Include="NetWork\Realms\LobbyWorldSelectResponse.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="CharacterServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
