@@ -97,6 +97,14 @@ namespace FrameWork.Config
                                 else
                                     Log.Error("WrongConfigValue", "Error in " + ConfigFile + " on line " + lineCounter + ". Need to be a valid Integer!");
                             }
+                            if (defaultValue is uint)
+                            {
+                                uint res;
+                                if (UInt32.TryParse(trimmedValue, out res))
+                                    return res;
+                                else
+                                    Log.Error("WrongConfigValue", "Error in " + ConfigFile + " on line " + lineCounter + ". Need to be a valid Integer!");
+                            }
                             if (defaultValue is string)
                             {
                                 return trimmedValue.Trim('"');

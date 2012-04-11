@@ -36,7 +36,7 @@ namespace FrameWork
 
         public DatabaseInfo() { }
 
-        public DatabaseInfo(string host, uint port, string db, string user, string password)
+        public DatabaseInfo(string host, int port, string db, string user, string password)
         {
             Server = host;
             Port = port.ToString();

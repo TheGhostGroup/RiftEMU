@@ -39,7 +39,7 @@ namespace CharacterServer
 
         public bool UseCertificate = (bool)CharConfig.ReadValue("Certificate.Enabled", false);
 
-        public DatabaseInfo AccountDB = new DatabaseInfo((string)CharConfig.ReadValue("MySql.Host", ""), (uint)CharConfig.ReadValue("MySql.Port", 3306), (string)CharConfig.ReadValue("MySql.Database", ""),
+        public DatabaseInfo AccountDB = new DatabaseInfo((string)CharConfig.ReadValue("MySql.Host", ""), (int)CharConfig.ReadValue("MySql.Port", 3306), (string)CharConfig.ReadValue("MySql.Database", ""),
                                                         (string)CharConfig.ReadValue("MySql.User", ""), (string)CharConfig.ReadValue("MySql.Password", ""));
 
         public LogInfo LogLevel = new LogInfo();
