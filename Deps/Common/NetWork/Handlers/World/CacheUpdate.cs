@@ -22,9 +22,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using FrameWork;
-using FrameWork;
-
 namespace FrameWork
 {
     [Serializable]

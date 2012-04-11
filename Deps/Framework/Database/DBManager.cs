@@ -34,6 +34,17 @@ namespace FrameWork
         public string Password = "password";
         public string Custom = "Treat Tiny As Boolean=False";
 
+        public DatabaseInfo() { }
+
+        public DatabaseInfo(string host, uint port, string db, string user, string password)
+        {
+            Server = host;
+            Port = port.ToString();
+            Database = db;
+            Username = user;
+            Password = password;
+        }
+
         public string Total()
         {
             string Result = "";

@@ -48,8 +48,6 @@ namespace CharacterServer
             Log.Texte("", "www.Strawberry-Pr0jcts.com", ConsoleColor.DarkCyan);
             Log.Texte("", "---------------------------------------------------------------", ConsoleColor.DarkBlue);
 
-            // Loading all configs files
-            ConfigMgr.LoadConfigs();
             Config = new CharacterConfig();
 
             // Loading log level from file
